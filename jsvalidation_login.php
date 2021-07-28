@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-   <title></title>
-
+	<title></title>
 </head>
 <body>
     <?php
@@ -10,9 +9,9 @@
 
     ?>
 
-   <?php
-   $username = $password = "";
-   $usernameErr =  $passwordErr = "";
+	<?php
+	$username = $password = "";
+	$usernameErr =  $passwordErr = "";
 
      if ($_SERVER["REQUEST_METHOD"] == "POST")
        {
@@ -55,34 +54,48 @@
          }
        } 
 
-   ?>
-     <!DOCTYPE html>
+	?>
+
+<!DOCTYPE html>
 <html>
 <head>
-    <title>Login Page</title>
+   <title></title>
+   <link rel="stylesheet"  href="CSS/style2.css">
 </head>
 <body>
-    <div class="signin-input">
+    
+    <script src="login.js"></script>
+   <?php
+
+        include 'db1.php';
+
+     ?>
+	 <div class="signin-input">
+     <h1>Login Here</h1>
      <form method="POST" action=" <?php echo htmlspecialchars($_SERVER["PHP_SELF"]) ?> ">
-      
+     	
         
 
-      <label for="username">Username</label>
-      <br>
-      <input type="text" id="username" name="username" placeholder="Enter your username" value="<?php echo $username ?>">
-      <br>
+     	<label for="username">Username</label>
+     	<br>
+     	<input type="text" id="username" name="username" placeholder="Enter your username" value="<?php echo $username ?>">
+     	<br>
         <?php echo $usernameErr ?>
         <br>
-      <label for="password">Password</label>
-      <br>
-      <input type="password" id="password" name="password" placeholder="Enter Your Password" value="<?php echo $password ?>">
+     	<label for="password">Password</label>
+     	<br>
+     	<input type="password" id="password" name="password" placeholder="Enter Your Password" value="<?php echo $password ?>">
         <br>
         <?php echo $passwordErr ?>
-      <br><br>
-      
-      <div class="login-button">
+     	<br><br>
+     	
+     	<div class="login-button">
 
          <input type="submit" id="login" name="login" value="Login">
+         <p>Not an user? <a href="jsvalidation_reg.php">Registration</a></p>
+         
+         <a href="home.php">Home Page</a
+
 
         </div>
         
