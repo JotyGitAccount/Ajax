@@ -10,7 +10,13 @@
 	<table align="left">
     <fieldset>
     	<h1>Home</h1>
-      <a href="login.php">login</a>
+      <a href="jsvalidation_login.php">login</a>
+      <tr>
+        <td align="right">
+          <a href="searchlist.php">Search</a>
+        </td>
+      </tr>
+
 	</table>
 </fieldset>
 </table>
